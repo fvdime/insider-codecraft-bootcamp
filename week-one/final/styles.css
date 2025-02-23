@@ -42,7 +42,7 @@ body {
 }
 
 .header li a:hover,
-.header .menu-btn:hover {
+.header .menu-button:hover {
   color: #d4d4d4;
 }
 
@@ -53,9 +53,11 @@ body {
 }
 
 .profile {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: right;
+  padding: 16px 20px 10px 20px;
 }
 
 .header .menu-icon {
@@ -95,28 +97,28 @@ body {
   top: -5px;
 }
 
-.header .menu-btn {
+.header .menu-button {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
+.header .menu-button:checked ~ .menu {
   max-height: 240px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.header .menu-button:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header .menu-button:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header .menu-button:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-button:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-button:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -132,11 +134,19 @@ body {
 }
 
 #likeButton {
-  background: none;
+  background: #1d3541;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border: none;
-  color: white;
+  color: #fff;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#likeIcon {
+  padding: 16px;
 }
 
 #likeButton.liked {
@@ -320,8 +330,7 @@ body {
 
 .ep-cont {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
@@ -371,6 +380,10 @@ body {
     object-fit: cover;
     object-position: center;
   }
+
+  .profile {
+    padding: 15px 0 10px 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -396,12 +409,21 @@ body {
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .ep-cont {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1025px) {
   .card-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .ep-cont {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .ep-container {
     flex-direction: row;
   }

@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("Javascript is running");
   const taskForm = document.getElementById('taskForm');
   const taskList = document.getElementById('taskList');
   const errorMessage = document.getElementById('errorMessage');
   const showCompleted = document.getElementById('showCompleted');
   const sortByPriority = document.getElementById('sortByPriority');
 
+  console.log('error:', errorMessage);
+
   let tasks = [];
 
   // Add Task
   taskForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     try {
       const title = document.getElementById('taskTitle').value.trim();
       const description = document.getElementById('taskDescription').value.trim();
@@ -38,27 +41,49 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       console.error("CATCH ERROR", error);
       errorMessage.textContent = error.message;
-      errorMessage.style.display = 'block';
     }
   });
 
   // Render Tasks
   function renderTasks(filteredTasks = tasks) {
     taskList.innerHTML = '';
+
     filteredTasks.forEach((task) => {
       const taskItem = document.createElement('li');
       taskItem.className = `taskItem ${task.completed ? 'completed' : ''}`;
-      taskItem.innerHTML = `
-        <div>
-          <h3>${task.title}</h3>
-          <p>${task.description}</p>
-          <span>Priority: ${task.priority}</span>
-        </div>
-        <div class="actions">
-          <button class="complete" data-id="${task.id}">${task.completed ? 'Undo' : 'Complete'}</button>
-          <button class="delete" data-id="${task.id}">Delete</button>
-        </div>
-      `;
+
+      // Task elements
+      const taskContent = document.createElement('div');
+      const taskTitle = document.createElement('h3');
+      taskTitle.textContent = task.title;
+      const taskDescription = document.createElement('p');
+      taskDescription.textContent = task.description;
+      const taskPriority = document.createElement('span');
+      taskPriority.textContent = `Priority: ${task.priority}`;
+
+      taskContent.appendChild(taskTitle);
+      taskContent.appendChild(taskDescription);
+      taskContent.appendChild(taskPriority);
+
+      const taskActions = document.createElement('div');
+      taskActions.className = 'actions';
+
+      const completeButton = document.createElement('button');
+      completeButton.className = 'complete';
+      completeButton.textContent = task.completed ? 'Undo' : 'Complete';
+      completeButton.setAttribute('data-id', task.id);
+
+      const deleteButton = document.createElement('button');
+      deleteButton.className = 'delete';
+      deleteButton.textContent = 'Delete';
+      deleteButton.setAttribute('data-id', task.id);
+
+      taskActions.appendChild(completeButton);
+      taskActions.appendChild(deleteButton);
+
+      taskItem.appendChild(taskContent);
+      taskItem.appendChild(taskActions);
+
       taskList.appendChild(taskItem);
     });
   }
@@ -83,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTasks(completedTasks);
   });
 
-  // Priority
+  // Sort by Priority
   sortByPriority.addEventListener('click', () => {
     const priorityOrder = { Low: 1, Medium: 2, High: 3 };
     const sortedTasks = tasks.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);

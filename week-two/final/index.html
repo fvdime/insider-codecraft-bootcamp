@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>week two final</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Manager</h1>
+      <form id="taskForm">
+        <input
+          type="text"
+          id="taskTitle"
+          placeholder="Task Title (required)"
+          required
+        />
+        <textarea
+          id="taskDescription"
+          placeholder="Task Description"
+        ></textarea>
+        <div class="priority">
+          <label>
+            <input type="radio" name="priority" value="Low" />
+            Low
+          </label>
+          <label>
+            <input type="radio" name="priority" value="Medium" />
+            Medium
+          </label>
+          <label>
+            <input type="radio" name="priority" value="High" />
+            High
+          </label>
+        </div>
+        <button type="submit">Add Task</button>
+        <p id="errorMessage" class="error"></p>
+      </form>
+
+      <div class="controls">
+        <button id="showCompleted">Show Only Completed Tasks</button>
+        <button id="sortByPriority">Sort by Priority (Low to High)</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

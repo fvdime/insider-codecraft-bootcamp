@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Crime and Punishment",
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/512dLJWJGIL._SY445_SX342_.jpg",
+    "link": "https://www.amazon.com.tr/Crime-Punishment-Fyodor-Dostoyevsky/dp/0140449132/ref=sr_1_1?sr=8-1"
+  },
+  {
+    "name": "War and Peace",
+    "price": 29.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1516480304i/220859.jpg",
+    "link": "https://www.amazon.com.tr/War-Peace-Leo-Tolstoy/dp/0140447938/ref=pd_bxgy_d_sccl_2/260-5527317-0123444?psc=1"
+  },
+  {
+    "name": "Frankenstein",
+    "price": 9.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631088473i/35031085.jpg",
+    "link": "https://www.amazon.com.tr/Frankenstein-1818-Text-Mary-Shelley/dp/0143131842/ref=sr_1_14?s=books&sr=1-14"
+  },
+  {
+    "name": "The Odyssey",
+    "price": 15.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1711957706i/1381.jpg",
+    "link": "https://www.amazon.com.tr/Odyssey-Homer/dp/0143039954/ref=sr_1_7?sr=8-7"
+  },
+  {
+    "name": "The Picture of Dorian Gray",
+    "price": 14.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1454087681i/489732.jpg",
+    "link": "https://www.amazon.com.tr/Picture-Dorian-Gray-Oscar-Wilde/dp/0141439572/ref=sr_1_1?__mk_tr_TR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1"
+  },
+  {
+    "name": "The Secret History",
+    "price": 19.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1451554846i/29044.jpg",
+    "link": "https://www.amazon.com.tr/Secret-History-30th-anniversary/dp/0241621909/ref=sr_1_1?sr=8-1"
+  },
+  {
+    "name": "The Bell Jar",
+    "price": 13.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668645154i/56616095.jpg",
+    "link": "https://www.amazon.com.tr/Bell-Jar-Sylvia-Plath/dp/0571226167/ref=sr_1_1?sr=8-1"
+  },
+  {
+    "name": "White Nights",
+    "price": 3.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1733882612i/29610266.jpg",
+    "link": "https://www.amazon.com.tr/White-Nights-Penguin-Little-Classics/dp/0241252083/ref=sr_1_1?__mk_tr_TR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&s=books&sr=1-1"
+  },
+  {
+    "name": "Ich Habe Keine Idee",
+    "price": 18.99,
+    "image": "https://m.media-amazon.com/images/I/512dLJWJGIL._SY445_SX342_.jpg",
+    "link": "https://www.amazon.com.tr/Crime-Punishment-Fyodor-Dostoyevsky/dp/0140449132/ref=sr_1_1?sr=8-1"
+  }
+]

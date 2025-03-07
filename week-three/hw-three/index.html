@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW TWO</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="applyButton">Apply</button>
+
+    <div id="container">
+      <div class="header">
+      <h1>Job Application</h1>
+      <button class="closeButton">x</button>
+      </div>
+      <form id="job-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required /><br /><br />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required /><br /><br />
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required /><br /><br />
+
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" /><br /><br />
+
+        <button type="submit" class="submitButton">Send</button>
+      </form>
+      <p id="success-message" >Application submitted successfully!</p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#applyButton").click(function () {
+          $(this).addClass("hidden");
+          $("#container").fadeIn();
+        });
+
+        function resetForm() {
+          $("#applyButton").removeClass("hidden");
+          $("#container").delay(3000).fadeOut();
+        }
+
+        $(".closeButton").click(function () {
+          resetForm();
+        });
+
+        $("#phone").mask("(999) 999-9999");
+        $("#date").datepicker({ dateFormat: "dd-mm-yy" });
+
+        $("#job-form").validate({
+          rules: {
+            name: { required: true, minlength: 2 },
+            lastName: { required: true, minlength: 2 },
+            email: { required: true, email: true },
+            phone: { required: true, minlength: 10 },
+            position: { required: true, minlength: 2 },
+            date: { required: true }
+          },
+          messages: {
+            name: { required: "Name is mandatory!", minlength: "At least 2 characters required." },
+            lastName: { required: "Last name is mandatory!", minlength: "At least 2 characters required." },
+            email: { required: "Email is mandatory!", email: "Please enter a valid email address." },
+            phone: { required: "Phone number is mandatory!", minlength: "Enter a valid phone number." },
+            position: { required: "Position is mandatory!", minlength: "At least 2 characters required." },
+            date: { required: "Date is mandatory!" }
+          },
+          errorClass: "error",
+          validClass: "valid",
+          errorPlacement: function(error, element) {
+            error.insertAfter(element);
+          },
+          submitHandler: function (form) {
+            $("#success-message").fadeIn().delay(3000).fadeOut();
+            form.reset();
+            resetForm();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

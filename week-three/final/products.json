@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Crime and Punishment",
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/512dLJWJGIL._SY445_SX342_.jpg",
+    "link": "https://www.amazon.com.tr/Crime-Punishment-Fyodor-Dostoyevsky/dp/0140449132/ref=sr_1_1?sr=8-1",
+    "details": "Dostoyevsky's great novel of damnation and redemption evokes a world where the lines between innocence and corruption, good and evil, blur. It tells the story of Raskolnikov, a destitute and desperate former student, who wanders through the slums of St Petersburg and commits a random murder without remorse or regret. He imagines himself to be beyond conventional moral laws. But as he embarks on a dangerous game of cat and mouse with a police investigator, Raskolnikov is pursued by the growing voice of his conscience and finds the noose of his own guilt tightening around his neck. Translated with an Introduction and notes by DAVID McDUFF"
+  },
+  {
+    "name": "War and Peace",
+    "price": 29.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1516480304i/220859.jpg",
+    "link": "https://www.amazon.com.tr/War-Peace-Leo-Tolstoy/dp/0140447938/ref=pd_bxgy_d_sccl_2/260-5527317-0123444?psc=1",
+    "details": "War and Peace begins at a glittering society party in St Petersburg in 1805, where conversations are dominated by the prospect of war. Terror swiftly engulfs the country as Napoleon's army marches on Russia, and the lives of three young people are changed forever. The stories of quixotic Pierre, cynical Andrey and impetuous Natasha interweave with a huge cast, from aristocrats and peasants to soldiers and Napoleon himself. Translated with an Introduction and Notes by Anthony Briggs with an Afterword by Orlando Figes"
+  },
+  {
+    "name": "Frankenstein",
+    "price": 9.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631088473i/35031085.jpg",
+    "link": "https://www.amazon.com.tr/Frankenstein-1818-Text-Mary-Shelley/dp/0143131842/ref=sr_1_14?s=books&sr=1-14",
+    "details": "Mary Shelley's seminal novel of the scientist whose creation becomes a monster. This edition is the original 1818 text, which preserves the hard-hitting and politically charged aspects of Shelley's original writing, as well as her unflinching wit and strong female voice. This edition also includes a new introduction and suggestions for further reading by author and Shelley expert Charlotte Gordon, literary excerpts and reviews selected by Gordon and a chronology and essay by preeminent Shelley scholar Charles E. Robinson."
+  },
+  {
+    "name": "The Odyssey",
+    "price": 15.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1711957706i/1381.jpg",
+    "link": "https://www.amazon.com.tr/Odyssey-Homer/dp/0143039954/ref=sr_1_7?sr=8-7",
+    "details": "If the Iliad is the world's greatest war epic, then the Odyssey is literature's grandest evocation of everyman's journey though life. Odysseus' reliance on his wit and wiliness for survival in his encounters with divine and natural forces, during his ten-year voyage home to Ithaca after the Trojan War, is at once a timeless human story and an individual test of moral endurance. In the myths and legends that are retold here, Fagles has captured the energy and poetry of Homer's original in a bold, contemporary idiom, and given us an Odyssey to read aloud, to savor, and to treasure for its sheer lyrical mastery. Renowned classicist Bernard Knox's superb Introduction and textual commentary provide new insights and background information for the general reader and scholar alike, intensifying the strength of Fagles' translation."
+  },
+  {
+    "name": "The Picture of Dorian Gray",
+    "price": 14.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1454087681i/489732.jpg",
+    "link": "https://www.amazon.com.tr/Picture-Dorian-Gray-Oscar-Wilde/dp/0141439572/ref=sr_1_1?__mk_tr_TR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1",
+    "details": "Enthralled by his own exquisite portrait, Dorian Gray exchanges his soul for eternal youth and beauty. Influenced by his friend Lord Henry Wotton, he is drawn into a corrupt double life, indulging his desires in secret while remaining a gentleman in the eyes of polite society. Only his portrait bears the traces of his decadence. The Picture of Dorian Gray was a succès de scandale. Early readers were shocked by its hints at unspeakable sins, and the book was later used as evidence against Wilde at the Old Bailey in 1895. This definitive edition includes a selection of contemporary reviews condemning the novel's immorality, and the introduction to the first Penguin Classics edition by Peter Ackroyd."
+  },
+  {
+    "name": "The Secret History",
+    "price": 19.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1451554846i/29044.jpg",
+    "link": "https://www.amazon.com.tr/Secret-History-30th-anniversary/dp/0241621909/ref=sr_1_1?sr=8-1",
+    "details": "Under the influence of their charismatic classics professor, a group of clever, eccentric misfits at an elite New England college discover a way of thinking and living that is a world away from the humdrum existence of their contemporaries. But when they go beyond the boundaries of normal morality they slip gradually from obsession to corruption and betrayal, and at last—inexorably—into evil."
+  },
+  {
+    "name": "The Bell Jar",
+    "price": 13.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668645154i/56616095.jpg",
+    "link": "https://www.amazon.com.tr/Bell-Jar-Sylvia-Plath/dp/0571226167/ref=sr_1_1?sr=8-1",
+    "details": "The Bell Jar chronicles the crack-up of Esther Greenwood: brilliant, beautiful, enormously talented, and successful, but slowly going under -- maybe for the last time. Sylvia Plath masterfully draws the reader into Esther's breakdown with such intensity that Esther's insanity becomes completely real and even rational, as probable and accessible an experience as going to the movies. Such deep penetration into the dark and harrowing corners of the psyche is an extraordinary accomplishment and has made The Bell Jar a haunting American classic."
+  },
+  {
+    "name": "White Nights",
+    "price": 3.99,
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1733882612i/29610266.jpg",
+    "link": "https://www.amazon.com.tr/White-Nights-Penguin-Little-Classics/dp/0241252083/ref=sr_1_1?__mk_tr_TR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&s=books&sr=1-1",
+    "details": "White Nights is a short story by Fyodor Dostoevsky that was published in 1848. Set in St. Petersburg, it is the story of a young man fighting his inner restlessness. A light and tender narrative, it delves into the torment and guilt of unrequited love. Both protagonists suffer from a deep sense of alienation that initially brings them together. A blend of romanticism and realism, the story appeals gently to the senses and feelings."
+  },
+  {
+    "name": "Ich Habe Keine Idee",
+    "price": 18.99,
+    "image": "https://m.media-amazon.com/images/I/512dLJWJGIL._SY445_SX342_.jpg",
+    "link": "https://www.amazon.com.tr/Crime-Punishment-Fyodor-Dostoyevsky/dp/0140449132/ref=sr_1_1?sr=8-1",
+    "details": "Ich habe keine Idee. Ich kann Deutsch sprechen, aber nicht gut hehe. Das soll eine Art Beschreibung sein. Oh nein! Wenn Sie das verstehen, hören Sie 'Du hast kein herz', sonst schade."
+  }
+]

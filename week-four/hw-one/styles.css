@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.ins-api-users {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.user p {
+  margin: 5px 0;
+}
+
+button {
+  background-color: #1b1b1b;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2c2c2c;
+}

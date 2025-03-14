@@ -3,48 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const localStorageKey = 'userData';
   const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
 
-  async function fetchUserData() {
+  const fetchUserData = async () => {
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/users');
-      if (!response.ok) {
-        throw new Error('Failed to fetch user data');
-      }
-
-      const data = await response.json();
-      return data;
+      if (!response.ok) throw new Error('Failed to fetch user data');
+      return await response.json();
     } catch (error) {
       console.error('Error while fetching user data:', error);
       usersContainer.innerHTML = '<p>Error while fetching user data. Please try again later.</p>';
       return null;
     }
+  };
+
+  const saveToLocalStorage = (data) => {
+    const expire = Date.now() + oneDayInMilliseconds;
+    localStorage.setItem(localStorageKey, JSON.stringify({ data, expire }));
   }
 
-  function saveToLocalStorage(data) {
-    const now = new Date().getTime();
-    const item = {
-      data: data,
-      expiry: now + oneDayInMilliseconds,
-    };
-
-    localStorage.setItem(localStorageKey, JSON.stringify(item));
-  }
-
-  function getFromLocalStorage() {
-    const item = localStorage.getItem(localStorageKey);
-    if (!item) return null;
-
-    const parsedItem = JSON.parse(item);
-    const now = new Date().getTime();
-
-    if (now > parsedItem.expiry) {
+  const getFromLocalStorage = () => {
+    const item = JSON.parse(localStorage.getItem(localStorageKey));
+    if (!item || Date.now() > item.expire) {
       localStorage.removeItem(localStorageKey);
       return null;
     }
-
-    return parsedItem.data;
+    return item.data;
   }
 
-  function displayUsers(users) {
+  const displayUsers = (users) => {
     usersContainer.innerHTML = '';
 
     users.forEach(user => {
@@ -57,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <button onclick="deleteUser(${user.id})">Delete</button>
         `;
 
-        usersContainer.appendChild(userDiv);
-      });
+      usersContainer.appendChild(userDiv);
+    });
   }
 
-  window.deleteUser = function(userId) {
+  window.deleteUser = (userId) => {
     let users = getFromLocalStorage();
     if (!users) return;
 
@@ -71,20 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   async function loadUserData() {
-    let users = getFromLocalStorage();
-
-    if (!users) {
-      users = await fetchUserData();
-
-      if (users) {
-        saveToLocalStorage(users);
-      }
-    }
+    let users = getFromLocalStorage() || await fetchUserData();
 
     if (users) {
+      saveToLocalStorage(users);
       displayUsers(users);
     }
-  }
+  };
 
   loadUserData();
 });
